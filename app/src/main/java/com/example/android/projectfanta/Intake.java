@@ -9,7 +9,7 @@ public class Intake implements Serializable {
     private String food;
 
     /**
-     * Creates an intake with appropraite nutrient values
+     * Creates an intake with appropriate nutrient values
      * @param food the food that was eaten
      */
     public Intake(String food) {
@@ -19,7 +19,7 @@ public class Intake implements Serializable {
     }
 
     /**
-     * Creates an intake with appropraite nutrient values
+     * Creates an intake with appropriate nutrient values
      * @param food the food that was eaten
      * @param servingSize how many servings of the food were eaten
      */
@@ -30,7 +30,7 @@ public class Intake implements Serializable {
     }
 
     /**
-     * Creates an intake with appropraite nutrient values
+     * Creates an intake with appropriate nutrient values
      * @param food the food that was eaten
      * @param servingSize how many servings of the food were eaten
      * @param creationTime the time of creation

@@ -2,7 +2,6 @@ package com.example.android.projectfanta;
 
 import android.util.Log;
 
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -103,6 +102,55 @@ public class Information implements Serializable {
             }
         };
         FirebaseDatabase.getInstance().getReference().child(uid).addListenerForSingleValueEvent(postListener);
+    }
+
+    /**
+     * Binary Search for times of food creation
+     * @param time the creation time we are looking for
+     * @return the index of the intake item with this creation time
+     */
+    public int binarySearch(long time) {
+
+        int numberOfIntakes = myIntakes.size();
+        int lower = 0;
+        int upper = numberOfIntakes-1;
+        int mid = 0;
+        boolean found = false;
+
+        while (found == false) {
+
+            if (upper < lower) return 0;
+            mid = lower + (upper - lower) / 2;
+
+            if (myIntakes.get(mid).getCreationTime() < time) lower = mid + 1;
+            else if (myIntakes.get(mid).getCreationTime() > time) upper = mid - 1;
+            else if (myIntakes.get(mid).getCreationTime() == time) found = true;
+
+        }
+
+        return mid;
+
+    }
+
+    /**
+     * Will return sum of intake in the interval of time between start and end
+     * @param start Beginning of interval of intake
+     * @param end Ending of interval of intake
+     * @return sum of intake within interval
+     */
+    public double getIntakeInInterval(long start, long end) {
+
+        double totalIntake = 0;
+
+        int startIndex = binarySearch(start);
+        int endIndex = binarySearch(end);
+
+        for (int i = startIndex; i <= endIndex; i++) {
+            totalIntake += myIntakes.get(i).getServings();
+        }
+
+        return totalIntake;
+
     }
 
 //    public static InformationDB convertToDB(Information myInfo) {
