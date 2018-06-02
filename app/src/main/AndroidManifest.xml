@@ -33,7 +33,8 @@
 
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home" />
+            android:label="@string/title_activity_home"
+            android:launchMode="singleTask"/>
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings" />
