@@ -92,6 +92,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:layout_alignParentEnd="true"
             android:padding="5dp"
             android:id="@+id/sensys"
             android:layout_toEndOf="@id/peter"
@@ -101,7 +102,6 @@
             android:layout_marginTop="33dp">
 
             <TextView
-                android:layout_marginLeft="40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -442,7 +442,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_centerInParent="true"
-                android:text="Software Architext"
+                android:text="Software Architect"
                 android:textColor="#000"/>
         </RelativeLayout>
 
