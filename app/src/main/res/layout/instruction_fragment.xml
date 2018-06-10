@@ -10,6 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:paddingTop="10sp"
+        android:paddingLeft="30sp"
+        android:paddingRight="30sp"
         android:layout_marginTop="70dp">
 
         <TextView
@@ -37,8 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
-            android:text="2. Search the username of the user you want to
-     view"/>
+            android:text="2. Search the username of the user you want to view"/>
 
         <TextView
             android:id="@+id/step3"
@@ -47,8 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
-            android:text="3.You can find their username in their Instruction
-    tab within Friends"/>
+            android:text="3.You can find their username in their Instruction tab within Friends"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -56,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp">
+        android:padding="30sp">
 
         <TextView
             android:id="@+id/titleHow1.1"
@@ -74,8 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
-            android:text="1. Share your username with the person whom
-     you would like to allow to see your profile"/>
+            android:text="1. Share your username with the person whom you would like to allow to see your profile"/>
 
         <TextView
             android:id="@+id/step2.1"

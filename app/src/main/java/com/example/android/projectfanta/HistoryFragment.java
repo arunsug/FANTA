@@ -124,7 +124,6 @@ public class HistoryFragment extends Fragment {
                         int id = rg.getCheckedRadioButtonId();
                         nutrient = (RadioButton) dialog.findViewById(id);
                         nutrientChoose();
-                        System.out.println(nutrient.getText().toString());
                         dialog.dismiss();
                     }
                 });
@@ -172,58 +171,66 @@ public class HistoryFragment extends Fragment {
                     .commit();
         }
 
-
-        switch (nutrient.getText().toString()) {
-            case "Calories":
+        try {
+            switch (nutrient.getText().toString()) {
+                case "Calories":
+                    WeekFragment.graphUpdateWeek("calories", true);
+                    MonthFragment.graphUpdateMonth("calories", true);
+                    YearFragment.graphUpdateYear("calories", true);
+                    break;
+                case "Total Fat":
+                    WeekFragment.graphUpdateWeek("fat", true);
+                    MonthFragment.graphUpdateMonth("fat", true);
+                    YearFragment.graphUpdateYear("fat", true);
+                    break;
+                case "Cholesterol":
+                    WeekFragment.graphUpdateWeek("cholesterol", true);
+                    MonthFragment.graphUpdateMonth("cholesterol", true);
+                    YearFragment.graphUpdateYear("cholesterol", true);
+                    break;
+                case "Sodium":
+                    WeekFragment.graphUpdateWeek("sodium", true);
+                    MonthFragment.graphUpdateMonth("sodium", true);
+                    YearFragment.graphUpdateYear("sodium", true);
+                    break;
+                case "Potassium":
+                    WeekFragment.graphUpdateWeek("potassium", true);
+                    MonthFragment.graphUpdateMonth("potassium", true);
+                    YearFragment.graphUpdateYear("potassium", true);
+                    break;
+                case "Total Carbs":
+                    WeekFragment.graphUpdateWeek("carbs", true);
+                    MonthFragment.graphUpdateMonth("carbs", true);
+                    YearFragment.graphUpdateYear("carbs", true);
+                    break;
+                case "Dietary Fiber":
+                    WeekFragment.graphUpdateWeek("fiber", true);
+                    MonthFragment.graphUpdateMonth("fiber", true);
+                    YearFragment.graphUpdateYear("fiber", true);
+                    break;
+                case "Sugars":
+                    WeekFragment.graphUpdateWeek("sugar", true);
+                    MonthFragment.graphUpdateMonth("sugar", true);
+                    YearFragment.graphUpdateYear("sugar", true);
+                    break;
+                case "Protein":
+                    WeekFragment.graphUpdateWeek("protein", true);
+                    MonthFragment.graphUpdateMonth("protein", true);
+                    YearFragment.graphUpdateYear("protein", true);
+                    break;
+                default:
+                    WeekFragment.graphUpdateWeek("calories", true);
+                    MonthFragment.graphUpdateMonth("calories", true);
+                    YearFragment.graphUpdateYear("calories", true);
+                    break;
+            }
+        }
+        catch (NullPointerException e) {
+            if (nutrient == null || nutrient.getText() == null) {
                 WeekFragment.graphUpdateWeek("calories", true);
-                MonthFragment.graphUpdateMonth("calories",true);
+                MonthFragment.graphUpdateMonth("calories", true);
                 YearFragment.graphUpdateYear("calories", true);
-                break;
-            case "Total Fat":
-                WeekFragment.graphUpdateWeek("fat", true);
-                MonthFragment.graphUpdateMonth("fat",true);
-                YearFragment.graphUpdateYear("fat", true);
-                break;
-            case "Cholesterol":
-                WeekFragment.graphUpdateWeek("cholesterol", true);
-                MonthFragment.graphUpdateMonth("cholesterol",true);
-                YearFragment.graphUpdateYear("cholesterol", true);
-                break;
-            case "Sodium":
-                WeekFragment.graphUpdateWeek("sodium",true);
-                MonthFragment.graphUpdateMonth("sodium",true);
-                YearFragment.graphUpdateYear("sodium", true);
-                break;
-            case "Potassium":
-                WeekFragment.graphUpdateWeek("potassium",true);
-                MonthFragment.graphUpdateMonth("potassium",true);
-                YearFragment.graphUpdateYear("potassium", true);
-                break;
-            case "Total Carbs":
-                WeekFragment.graphUpdateWeek("carbs", true);
-                MonthFragment.graphUpdateMonth("carbs",true);
-                YearFragment.graphUpdateYear("carbs", true);
-                break;
-            case "Dietary Fiber":
-                WeekFragment.graphUpdateWeek("fiber",true);
-                MonthFragment.graphUpdateMonth("fiber",true);
-                YearFragment.graphUpdateYear("fiber", true);
-                break;
-            case "Sugars":
-                WeekFragment.graphUpdateWeek("sugar",true);
-                MonthFragment.graphUpdateMonth("sugar",true);
-                YearFragment.graphUpdateYear("sugar", true);
-                break;
-            case "Protein":
-                WeekFragment.graphUpdateWeek("protein",true);
-                MonthFragment.graphUpdateMonth("protein",true);
-                YearFragment.graphUpdateYear("protein", true);
-                break;
-            default:
-                WeekFragment.graphUpdateWeek("calories",true);
-                MonthFragment.graphUpdateMonth("calories",true);
-                YearFragment.graphUpdateYear("calories", true);
-                break;
+            }
         }
     }
 
