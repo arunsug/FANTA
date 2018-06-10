@@ -26,8 +26,8 @@
 
     <RelativeLayout
         android:layout_width="250dp"
-        android:layout_height="270dp"
-        android:layout_marginTop="110dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="90dp"
         android:background="@drawable/rectangle"
         android:layout_centerHorizontal="true">
 
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="My Top 8 Foods"
+                android:text="My Top 6 Foods"
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:textStyle="bold" />

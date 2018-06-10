@@ -23,9 +23,9 @@
         <!--Row 1 Column 1 -->
 
         <android.support.v7.widget.CardView
+            app:cardBackgroundColor="#f0f0f0"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:cardBackgroundColor="#dcdcdc"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_marginBottom="16dp"
@@ -63,7 +63,7 @@
         <!--Row 1 Column 2 -->
 
         <android.support.v7.widget.CardView
-            app:cardBackgroundColor="#dcdcdc"
+            app:cardBackgroundColor="#f0f0f0"
             android:id="@+id/my_account"
             android:onClick="myAccount"
             android:layout_width="0dp"
@@ -105,7 +105,7 @@
         <!--Row 2 Column 1 -->
 
         <android.support.v7.widget.CardView
-            app:cardBackgroundColor="#dcdcdc"
+            app:cardBackgroundColor="#f0f0f0"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -146,7 +146,7 @@
         <!--Row 2 Column 2 -->
 
         <android.support.v7.widget.CardView
-            app:cardBackgroundColor="#dcdcdc"
+            app:cardBackgroundColor="#f0f0f0"
             android:id="@+id/log_out"
             android:layout_width="0dp"
             android:layout_height="0dp"
